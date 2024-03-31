@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferry's Portofolio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -62,10 +63,13 @@
             margin-left: 1.5vw;
             margin-right: 1.5vw;
             cursor: pointer;
+            display: flex;
         }
         .nav-menu ul li a{
             text-decoration: none;
             color: rgb(46, 24, 24);
+            font-size: 1.3vw;
+            display: flex;
         }
         .nav-menu ul li:hover{
             color: rgb(124, 83, 83);
@@ -95,11 +99,13 @@
             text-shadow: 0vw 0.4vw 0.7vw gray;
             margin-left: 5vw;
             font-family: 'Inknut Antiqua';
+            width: fit-content;
         }
         #introduction{
             text-align: center;
             font-family: 'Inknut Antiqua';
             font-size: 1.75vw;
+            width: fit-content;
             text-shadow: 0vw 0.4vw 0.7vw gray;
         }
         
@@ -266,6 +272,7 @@
         }
         .contact form button:hover{
             background-color: #5014FA;
+            color: wheat;
             transition: 0.9s;
             border-color: #56B972;
         }
@@ -451,7 +458,7 @@
             <nav class="nav-menu">
                 <ul>
                     <li><a href="#profile">Profile</a></li>
-                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#technical">Technical Expertise</a></li>
                     <li><a href="#my-project">My Project</a></li>
                     <li><a href="#contact-me">Contact Me</a></li>
                 </ul>
@@ -468,7 +475,7 @@
             </p>
         </div>
     </div>
-    <div class="about-myskill" id="about-me">
+    <div class="about-myskill" id="technical">
         <div class="section-font" style="padding: 5vw;display: flex;justify-content: center;">
             <div style="font-size: 3vw;">Development Process</div>
         </div>
@@ -497,22 +504,27 @@
             <div class="container-skill">
                 <span class="section-font">HTML</span>
                 <div class="percent-skill" id="id-percent-skill1"></div>
+                <div class="section-font">80%</div>
             </div>
             <div class="container-skill">
                 <span class="section-font">CSS</span>
                 <div class="percent-skill" id="id-percent-skill2"></div>
+                <div class="section-font">90%</div>
             </div>
             <div class="container-skill">
                 <span class="section-font">Mysql</span>
                 <div class="percent-skill" id="id-percent-skill3"></div>
+                <div class="section-font">84%</div>
             </div>
             <div class="container-skill">
                 <span class="section-font">Javascript</span>
                 <div class="percent-skill" id="id-percent-skill4"></div>
+                <div class="section-font">70%</div>
             </div>
             <div class="container-skill">
                 <span class="section-font">PHP</span>
                 <div class="percent-skill" id="id-percent-skill5"></div>
+                <div class="section-font">60%</div>
             </div>
         </div>
     </div>
@@ -545,9 +557,11 @@
             <div class="name-project" style="background-color: rgb(221, 212, 212);">
                 <div style="position: relative;transform: skew(40deg);">Design Felix's Shop</div>    
             </div>
-            <iframe class="iframe-project" id="iframe-felix-shop" src="resource/Edited Design Web_2.pdf" frameborder="0" style="overflow: hidden;" >
+
+            <iframe class="iframe-project"  id="iframe-felix-shop" src="iframe.html" frameborder="0" style="overflow: hidden;" >
             
             </iframe>
+            
             <div class="caption-project" id="caption-felix-shop">
                 <p style="width: 70vw;position: relative;font-size: 2.35vw;font-family: 'Inder';">
                     "The "Felix Shop" web project is an initiative to build and operate an online store called 
