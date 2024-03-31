@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferry's Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+        body{
+            margin: 0%;
+        }
+        .bg-top{
+            background-image: url('resource/bg-top.jpg');
+            background-size: 100vw 66vw;
+            width: 100vw;
+            height: 65vw;
+            margin: 0%;
+
+        }
+        .header{
+            background-color: rgba(255, 228, 196,0.9);
+            position: absolute;
+            width: 97vw;
+            padding: 1.5vw;
+            display: flex;
+            align-items: center;
+            margin: 0%;
+            justify-content: space-between;
+            box-shadow: 0vw 0.9vw 0.5vw 0vw hsla(0, 0%, 50%,0.2);
+
+        }
+        #myname{
+            font-family: 'Istok Web';
+            font-size: 2vw;
+            font-weight: 600;
+        }
+        .nav-menu{
+            margin-right: 4vw;
+        }
+        .nav-menu ul{
+            padding: 0%;
+            margin: 0%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .nav-menu ul li{
+            margin-left: 1.5vw;
+            margin-right: 1.5vw;
+            cursor: pointer;
+        }
+        .nav-menu ul li a{
+            text-decoration: none;
+            color: rgb(46, 24, 24);
+        }
+        .nav-menu ul li:hover{
+            color: rgb(124, 83, 83);
+            transform: scale(1.2);
+            transition: 0.7s;
+        }
+        .profile{
+           opacity: 0;
+           transform: translateX(-0vw);
+           transition: opacity 0.5s ease ,transform 0.7s ease;
+           position: absolute;
+           left: 30vw;
+           top: 25vw;
+           padding: 20px;
+           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .show{
+            opacity: 1;
+            transform: translateX(-20vw);
+        }
+        .profile{
+            width: 50vw;
+        }
+        #greet{
+            font-size: 2.93vw;
+            text-align: center;
+            text-shadow: 0vw 0.4vw 0.7vw gray;
+            margin-left: 5vw;
+            font-family: 'Inknut Antiqua';
+        }
+        #introduction{
+            text-align: center;
+            font-family: 'Inknut Antiqua';
+            font-size: 1.75vw;
+            text-shadow: 0vw 0.4vw 0.7vw gray;
+        }
+        
+        .plantanalis{
+            margin-top: 0%;
+            width: 100vw;
+            height: 124vw;
+            background-image: url('resource/bg-plantanalis.jpg');
+            background-size: 100vw 124vw;
+
+        }
+        .design-felix-shop{
+            margin-top: 0%;
+            width: 100vw;
+            height: 124vw;
+            background-image: url('resource/bg-felix.jpg');
+            background-size: 100vw 124vw;
+        }
+        #iframe-felix-shop{
+            border: 0.5vw solid rgb(221, 212, 212);
+        }
+        #link-felix-shop{
+            background-color: rgb(221, 212, 212);
+        }
+        #caption-felix-shop{
+            background-image: linear-gradient( to right , rgb(221, 212, 212),rgb(204, 179, 179),rgb(190, 171, 171));
+        }
+        .name-project{
+            position: relative;
+            top: 15vw;
+            left: calc((100vw - 35.22vw) / 2);
+            width: calc(0.587vw * 60); /*35.22*/
+            height: calc(0.587vw * 6);
+            font-size: calc(0.587vw * 4);
+            background-color: rgb(72, 224, 105);
+            text-align: center;
+            box-shadow: 0.1vw 0.2vw 0.3vw 0.1vw gray;
+            font-family: 'Inder';
+
+        }
+        .iframe-project{
+            position: relative;
+            transform: translateX(20vw);
+            opacity: 0;
+            transition: opacity 0.5s ease ,transform 0.3s ease;
+            width: 58vw;
+            height: 31.7vw;
+            left: 21vw;
+            top: 36vw;
+            box-shadow: 0vw 0.5vw 0.7vw 0vw gray;
+            overflow:hidden;
+            scrollbar-width: none;
+            transform: scale(1.1);
+            border: 0.5vw solid rgb(72, 224, 105);
+            
+        }
+        .caption-project{
+            opacity: 0;
+            transform: translateX(3vw);
+            transition: opacity 0.4s ease , transform 0.3s ease;
+            text-align: center;
+            background-image: linear-gradient(to right, #86EAA2,#56B972,#2FD35D );
+            position: relative;
+            padding-top: 5vw;
+            padding-bottom: 5vw;
+            top: 45vw;
+            left: 5vw;
+            width: 90vw;
+            align-items: center;
+            box-shadow: 0.1vw 0.2vw 0.3vw 0.1vw gray;
+        }
+        .caption-project p{
+            margin-left: 10vw;
+        }
+        .link-project{
+            opacity: 0;
+            transform: translateX(5vw);
+            transition: opacity 0.3s ease, transform 0.4s ease;
+            position: relative;
+            background-color: rgb(72, 224, 105);
+            border-radius: 50vw;
+            align-content: center;
+            margin-top: 0%;
+            top: 46.5vw;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0.1vw 0.2vw 0.3vw 0.1vw gray;
+            padding: 1vw;
+            width: 35vw;
+            left: 32.5vw;
+        }
+        .link-project:hover{
+            color: rgb(59, 59, 58);
+            transform: scale(1.55vw);
+            background-color: rgb(113, 219, 136);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .mau-belajar{
+            background-image: url('resource/bg-mau-belajar.jpg');
+            background-size: 100vw 150vw;
+            width: 100vw;
+            height: 150vw;
+        }
+        .my-certificate{
+            background-image: linear-gradient(to right,#F5E5E5,#F5CECE,#FAC5C5) ;
+            width: 100vw;
+            height: 150vw;
+        }
+        .section-font{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 2vw;
+            color: #975353;
+        }
+        .contact form{
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            display: flex;
+        }
+        .contact form input{
+            align-items: center;
+            justify-content: center;
+            border: 0.8vw solid rgb(249, 147, 147);
+            border-radius: 5vw;
+            font-family: 'Inder';
+            outline: unset;
+            width: 40vw;
+            height: 4vw;
+            font-size: 2vw;
+            padding-left: 3vw;
+        }
+        .contact form textarea{     
+            align-items: center;
+            justify-content: center;
+            border: 0.8vw solid rgb(249, 147, 147);
+            border-radius: 5vw;
+            font-family: 'Inder';
+            outline: unset;
+            width: 40vw;
+            height: 20vw;
+            font-size: 2vw;
+            padding-left: 3vw;
+            overflow: hidden;
+            padding-top: 1vw;
+            min-height: 10vw;
+            max-height: 30vw;
+            min-width: 30vw;
+            max-width: 50vw;
+        }
+        .contact form button{
+            background-color: rgb(236, 80, 80);
+            align-items: center;
+            justify-content: center;
+            border: 0.8vw solid rgb(249, 147, 147);
+            border-radius: 5vw;
+            font-family: 'Inder';
+            outline: unset;
+            width: 42vw;
+            font-size: 2vw;
+            padding: 2vw;
+            box-shadow: 0 0.2vw 0.2vw 0 gray;
+            cursor: pointer;
+        }
+        .contact form button:hover{
+            background-color: #5014FA;
+            transition: 0.9s;
+            border-color: #56B972;
+        }
+        .name-project{
+            opacity: 0;
+            transform: translateX(10vw);
+            transition: opacity 0.5s ease ,transform 0.6s ease;
+            
+        }
+        .show-name{
+            opacity: 1;
+            transform: translateX(0vw);
+            transform: skew(-40deg);
+        }
+        .show-iframe{
+            opacity: 1;
+            transform: translateX(0vw);
+        }
+        .show-caption{
+            opacity: 1;
+            transform: translateX(0vw);            
+        }
+        .show-link{
+            opacity: 1;
+            transform: translateX(0vw);            
+        }
+        .section-name-container{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .section-name{
+            opacity: 0;
+            transform: translateX(5vw);
+            transition: opacity 0.3s ease, transform 0.4s ease;
+            width: fit-content;
+            background-color: unset;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+        }
+        .img-binar{
+            width: calc(1.41vw * 22);
+            height: calc(1vw * 18);
+        }
+        .section-left , .img-left{
+            opacity: 0;
+            transform: translateX(-10vw);
+            transition: opacity 0.3s ease, transform 0.4s ease;
+            position: relative;
+            width: fit-content;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            float: left;
+            margin-bottom: 3vw;
+        }
+        .section-right , .img-right{
+            opacity: 0;
+            transform: translateX(10vw);
+            transition: opacity 0.3s ease, transform 0.4s ease;
+            position: relative;
+            width: fit-content;
+            float: right;
+            margin-bottom: 3vw;
+        }
+        
+        .img-right, .section-right{
+            margin-left: 4vw;
+        }
+        .link-project2{
+            opacity: 0.2;
+            transform: translateX(5vw);
+            transition: opacity 0.3s ease, transform 0.4s ease;
+            position: relative;
+            width: fit-content;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .show-link2{
+            opacity: 1;
+            transform: translateX(0vw);  
+        }
+        .show-left{
+            opacity: 1;
+            transform: translateX(0vw);  
+        }
+        .show-right{
+            opacity: 1;
+            transform: translateX(0vw);  
+        }
+        .show-section-name{
+            opacity: 1;
+            transform: translateX(0vw);      
+        }
+        .my-social img{
+            align-self: center;
+            width: 8vw;
+            height: 8vw;
+            margin-bottom: 6vw;
+            cursor: pointer;
+        }
+        .my-social img:hover{
+            transition: transform 0.4s ease;
+            transform: scale(1.1);
+        }
+        .my-social{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-myskill{
+            background-image: linear-gradient(to right ,#F4DBB9,#F3DAB3,#EDD4AE);
+            width: 100vw;
+            height: fit-content;
+            padding-bottom: 8vw;
+        }
+        .flow-development{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .flow-development div{
+            border-radius: 100vw;
+            width: 10vw;
+            height: 10vw;
+            /* background-color: rgb(231, 206, 158); */
+            background-image: radial-gradient(rgb(238, 227, 227),rgb(179, 179, 209));
+            position: relative;
+            padding: 3vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border: 1vw solid rgb(50, 40, 190);
+            box-shadow: 0 1vw 1vw 0 gray;
+            cursor: pointer;
+        }
+        .flow-development div:hover{
+            transform: scale(1.1);
+        }
+        .flow-development div span{
+            font-family: 'Inder';
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-size: 3vw;
+        }
+        .percent-skill{
+            background-color: rgb(116, 33, 33);
+            width: 0vw;
+            height: 4vw; 
+            position: relative;
+            transition: width 1.9s ease;
+        }
+        .container-skill{
+            display: flex;
+            padding: 3vw;
+            gap: 1vw;
+            align-items: center;
+        }
+        .container-skill span {
+            width: 10vw;
+            margin-left: 5vw;
+        }
+        .id-percent-skill1{
+            width: 40vw;
+        }
+        .id-percent-skill2{
+            width: 45vw ;
+        }
+        .id-percent-skill3{
+            width: 42vw;
+        }
+        .id-percent-skill4{
+            width: 35vw;
+        }
+        .id-percent-skill5{
+            width: 30vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-top">
+        <header class="header">
+            <span id="myname">Ferry Pradana</span>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#my-project">My Project</a></li>
+                    <li><a href="#contact-me">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="profile" id="profile">
+            <span id="greet">
+                Hello, <span style="color: red;">I'm Ferry Pradana</span>
+            </span>
+            <p id="introduction">
+                "I am an entrepreneur who is engaged in gaining new knowledge, and I am happy to share creativity through web 
+                development and technology. With my experience in this field, I strive to find innovative and compelling 
+                solutions to every challenge I face"
+            </p>
+        </div>
+    </div>
+    <div class="about-myskill" id="about-me">
+        <div class="section-font" style="padding: 5vw;display: flex;justify-content: center;">
+            <div style="font-size: 3vw;">Development Process</div>
+        </div>
+        <div class="flow-development">
+            <div>
+                <span>1</span><br>
+                <span>Concept</span>
+            </div>
+            <div>
+                <span>2</span><br>
+                <span>Design</span>
+            </div>
+            <div>
+                <span>3</span><br>
+                <span>Code</span>
+            </div>
+            <div>
+                <span>4</span><br>
+                <span>Launch</span>
+            </div>
+        </div>
+        <div style="padding: 4vw;">
+            <div class="section-font" style="font-size: 3vw;">
+                About My Programming Skills...
+            </div>
+            <div class="container-skill">
+                <span class="section-font">HTML</span>
+                <div class="percent-skill" id="id-percent-skill1"></div>
+            </div>
+            <div class="container-skill">
+                <span class="section-font">CSS</span>
+                <div class="percent-skill" id="id-percent-skill2"></div>
+            </div>
+            <div class="container-skill">
+                <span class="section-font">Mysql</span>
+                <div class="percent-skill" id="id-percent-skill3"></div>
+            </div>
+            <div class="container-skill">
+                <span class="section-font">Javascript</span>
+                <div class="percent-skill" id="id-percent-skill4"></div>
+            </div>
+            <div class="container-skill">
+                <span class="section-font">PHP</span>
+                <div class="percent-skill" id="id-percent-skill5"></div>
+            </div>
+        </div>
+    </div>
+    <div class="division-project" style="margin-bottom: 0%;">
+        <div style="height: 2vw;background-color: #F0BEBE;justify-content: center;width: 100vw;padding-top: 0.1vw;box-shadow: 0 0.1vw 0.1vw 0 gray;position: relative;">
+            <span style="font-size: 1.5vw;background-color: #f0d0d0;position: relative;padding: 1vw;width: fit-content;left: 46vw;font-family: 'Inder';box-shadow: 0 0.3vw 0.3vw 0 gray;">MY PROJECT</span>
+        </div>
+    </div>
+    <div class="my-project" id="my-project">
+        <div class="plantanalis">
+            <div class="name-project">
+                <div style="position: relative;transform: skew(40deg);">Plantanalis</div>    
+            </div>
+            <iframe  class="iframe-project" src="https://plantanaliss.netlify.app/" frameborder="0" >
+
+            </iframe>
+            <div class="caption-project" id="caption-plantanalis">
+                <p style="width: 70vw;position: relative;font-size: 2.35vw;font-family: 'Inder';">
+                    "Plantanalis is a web project that aims to provide an in-depth analysis of different types
+                    of plants and herbs. Through this website, users can find information on plant growth, proper
+                    care, diagnosis of plant diseases, and various tips and tricks to take care of their garden or 
+                    garden more effectively."
+                </p>
+            </div>
+            <div class="link-project" id="link-plantanalis" >
+                <div style="position: relative;font-family: 'Inder';font-size: 2.35vw;">Plantanalis.site</div>
+            </div>
+        </div>
+        <div class="design-felix-shop">
+            <div class="name-project" style="background-color: rgb(221, 212, 212);">
+                <div style="position: relative;transform: skew(40deg);">Design Felix's Shop</div>    
+            </div>
+            <iframe class="iframe-project" id="iframe-felix-shop" src="resource/Edited Design Web_2.pdf" frameborder="0" style="overflow: hidden;" >
+            
+            </iframe>
+            <div class="caption-project" id="caption-felix-shop">
+                <p style="width: 70vw;position: relative;font-size: 2.35vw;font-family: 'Inder';">
+                    "The "Felix Shop" web project is an initiative to build and operate an online store called 
+                    "Felix Shop" in the online world. The aim of the project is to provide an e-commerce platform
+                    that allows users to browse, select and purchase various products easily and conveniently."
+                </p>
+            </div>
+            <div class="link-project" id="link-felix-shop" >
+                <a href="resource/Edited Design Web_2.pdf" download style="text-decoration: none;position: relative;font-family: 'Inder';font-size: 2.35vw;">Download Design</a>
+            </div>
+        </div>
+        <div class="mau-belajar">
+            <div class="name-project" style="background-color: #B7BDEF;">
+                <div style="position: relative;transform: skew(40deg);color: #5014FA;">Mau Belajar</div>
+            </div>
+            <iframe src="https://plantanalis.netlify.app/" class="iframe-project" style="border: 0.5vw solid #5014FA;" frameborder="0"></iframe>
+            <div class="caption-project" id="caption-plantanalis" style="background-image: linear-gradient(to right, #866bcf ,#7655d1, #6531f5) ;">
+                <p style="width: 70vw;position: relative;font-size: 2.35vw;font-family: 'Inder';">
+                    "Project website ' Mau Belajar’ is an online learning platform designed to help
+                    the users in the exploration and learning of new concepts interactively. Through the website
+                    this, users can access a variety of learning content, such as tutorials, interactive exercises, and 
+                    other educational resources, designed to facilitate a fun learning process and
+                    effective."
+                </p>
+            </div>
+            <div class="link-project" id="link-mau-belajar" style="background-image: none;background-color: #B7BDEF;">
+                <div style="position: relative;font-family: 'Inder';font-size: 2.35vw;color: #6531f5;">MauBelajar.site</div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="my-certificate">
+        <div class="section-font" style="position: relative;text-align: center;padding-top: 5vw;padding-bottom: 8vw;font-size: 3vw;">MY CERTIFICATE</div>
+        <div class="my-certicicate">
+
+            <div class="section-name-container">
+                <div class="section-font section-name" style="position: relative;text-align: center;justify-content: center;margin-bottom: 3vw;">Certificate Fundamental Full Stack Development Course of Revou</div>
+            </div>
+            <div style="justify-content: center;align-items: center;display: flex;margin-bottom: 5vw;">
+                <img class="img-left" style="width: calc(1.41vw * 20);height: calc(1vw * 20);" src="resource/Certificate Fundamental Course of Revou.png" alt="Coa : Fundamental Course of Revou">    
+                <p class="section-font section-right" style="font-size: 1.5vw;color: #795252;text-align: center;width: 40vw;margin-left: 4vw;font-family: 'IM Fell DW Pica';"> 
+                    "The certificate Fundamental Course of Revou" is the recognition of the completion of the basic course organized
+                    by Revou. This certificate confirms the participant's understanding of the basic concepts taught in the course
+                    , providing evidence of success in learning basic material relevant to the subject of the course."
+                </p>
+            </div>
+
+            <div class="section-name-container">
+                <div class="section-font section-name" style="position: relative;text-align: center;justify-content: center;margin-bottom: 3vw;">Certificate Introduction Full Stack Web Developer of Binar</div>
+            </div>
+            <div style="justify-content: center;align-items: center;display: flex;margin-bottom: 5vw;">
+                <p class="section-font section-left" style="float: left;font-size: 1.5vw;color: #795252;text-align: center;width: 40vw;font-family: 'IM Fell DW Pica';"> 
+                    "Introduction to the twinkle Full Stack Web developer certificate" is an award given to
+                    participants who complete the Full Stack Web Developer Training program at Binar Academy or institutions
+                    similar. This Program aims to provide understanding and the ability to understand in the development 
+                    web applications, from frontend to backend, use technologies such as HTML, CSS, JavaScript.""
+                </p>
+                <img class="img-right img-binar" src="resource/Certificate Intro Web Development Binar.png" alt="CoA :Introduction Full Stack Web Developer of Binar">    
+            </div>
+
+            <div class="section-name-container">
+                <div class="section-font section-name" style="position: relative;text-align: center;justify-content: center;margin-bottom: 3vw;">Certificate Introduction Quality Assurance of Binar</div>
+            </div>
+            <div style="justify-content: center;align-items: center;display: flex;margin-bottom: 5vw;">
+                <img class="img-left img-binar"  src="resource/Certificate Quality Assurance Binar.png" alt="Coa : Fundamental Course of Revou">    
+                <p class="section-font section-right" style="font-size: 1.5vw;color: #795252;text-align: center;width: 40vw;margin-left: 4vw;font-family: 'IM Fell DW Pica';"> 
+                    "Certificate of introduction to quality assurance from Binar" is an award given to participants who have completed 
+                    an introductory program on basic practices and concepts in quality assurance organized by Binar Academy. 
+                    This Program aims to provide a comprehensive understanding of the importance of quality assurance in the 
+                    development of products and services."
+                </p>
+            </div>
+            <!-- // -->
+ 
+            <div class="section-name-container">
+                <div class="section-font section-name" style="position: relative;text-align: center;justify-content: center;margin-bottom: 3vw;">Certificate Introduction Product Management of Binar</div>
+            </div>            
+            <div style="justify-content: center;align-items: center;display: flex;margin-bottom: 5vw;">
+                <p class="section-font section-left" style="float: left;font-size: 1.5vw;color: #795252;text-align: center;width: 40vw;font-family: 'IM Fell DW Pica';"> 
+                    "Certificate of introduction to Product Management from Twinkle" is an official recognition given to participants 
+                    as an introduction to the basic concepts in product management. This Program is designed to provide an understanding 
+                    of product development strategies, market analysis, and best practices in product management."
+                </p>
+                <img class="img-right img-binar" src="resource/Certificate Product Manager Binar.png" alt="CoA :Introduction Full Stack Web Developer of Binar">    
+            </div>
+            
+        </div>
+    
+    </div>
+    <div class="contact" id="contact-me" style="background-color: #FFE4C4;height: fit-content;align-items: center;width: 100vw;">
+        <div class="section-font" style="text-align: center;padding-top: 5vw;padding-bottom: 5vw;font-size: 3vw;">- CONTACT ME -</div>
+        <form action="">
+            <input class="input" type="text" placeholder="    Name"><br>
+            <input class="input" type="text" name="" id="" placeholder="    E-mail"><br>
+            <input class="input" type="text" placeholder="    Subject"><br><br>
+            <textarea class=""  placeholder="    Message" name="" id="" cols="30" rows="10"></textarea><br>
+            <button class="input">Send</button>
+        </form>
+        <div class="section-font" style="text-align: center;padding-top: 5vw;padding-bottom: 5vw;">I AM CONTACT</div>
+        <div class="my-social">
+            <img src="resource/dc15b6d8-6fc1-4ff6-9dca-1161d04b7c85.png" alt="facebook-account" onclick="facebookhreff()">
+            <img src="resource/68ea0a97-7691-4cbe-9187-65cb24813793.png" alt="twiter-account" onclick="twitterhreff()">
+            <img src="resource/40be6f75-57d8-4ec7-b18c-39d5be4fbcba.png" alt="instagram-account" onclick="instagramhreff()">
+            <img src="resource/ee224cd3-d1fb-4c4b-92d9-d91a30473608.png" alt="whatsapp-account" onclick="whatsapphreff()">
+        </div>
+    </div>
+</body>
+<script>
+    function isinviewport(element){
+            var rect = element.getBoundingClientRect();
+            return(
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+    }
+    function facebookhreff(){
+        window.location.href = "https://id-id.facebook.com/people/Ferry-Kun/pfbid02Uq24cpPnSDrHEXY1ZXwhajc8BgJ7tJ8V51tR86p18y1ZUx1VUdRqkxSDoHZa9cuql/"
+    }
+    function twitterhreff(){
+        window.location.href = "https://twitter.com/FerryPr84732206"
+    }
+    function instagramhreff(){
+        window.location.href = "https://www.instagram.com/felix_kunnn/"
+    }
+    function whatsapphreff(){
+        window.location.href = "https://wa.me/085842353740"
+    }
+    function handleScroll() {
+        var profile = document.querySelector('.profile');
+        var nameProject = document.querySelectorAll('.name-project');
+        var iframe = document.querySelectorAll('.iframe-project');
+        var caption = document.querySelectorAll('.caption-project');        
+        var link = document.querySelectorAll('.link-project');
+        var link2 = document.querySelectorAll('.link-project2');
+        var section = document.querySelectorAll('.section-name');
+        var section_left = document.querySelectorAll('.section-left');
+        var section_right = document.querySelectorAll('.section-right');
+        var img_left = document.querySelectorAll('.img-left');
+        var img_right = document.querySelectorAll('.img-right');
+        var percentskill = document.querySelectorAll('.percent-skill')
+        var skil1 = document.querySelector('#id-percent-skill1');
+        var skil2 = document.querySelector('#id-percent-skill2');
+        var skil3 = document.querySelector('#id-percent-skill3');
+        var skil4 = document.querySelector('#id-percent-skill4');
+        var skil5 = document.querySelector('#id-percent-skill5');
+
+        if (isinviewport(profile)) {
+            profile.classList.add('show');
+        }
+        if (isinviewport(skil1)) {
+            skil1.classList.add('id-percent-skill1');
+        }
+        if (isinviewport(skil2)) {
+            skil2.classList.add('id-percent-skill2');
+        }
+        if (isinviewport(skil3)) {
+            skil3.classList.add('id-percent-skill3');
+        }
+        if (isinviewport(skil4)) {
+            skil4.classList.add('id-percent-skill4');
+        }
+        if (isinviewport(skil5)) {
+            skil5.classList.add('id-percent-skill5');
+        }
+        nameProject.forEach(function(element){
+            if (isinviewport(element)) {
+                element.classList.add('show-name')
+            }    
+        })
+       
+        iframe.forEach(function(element){
+            if(isinviewport(element)){
+                element.classList.add('show-iframe')
+            }
+        }) 
+        caption.forEach(function(element){
+            if(isinviewport(element)){
+                element.classList.add('show-caption')
+            }
+        })
+        section.forEach(function(element){
+            if(isinviewport(element)){
+                element.classList.add('show-section-name')
+            }
+        })
+        link.forEach(function(element){
+            if(isinviewport(element)){
+                element.classList.add('show-link')
+            }
+        })
+        link2.forEach(function(element){
+            if(isinviewport(element)){
+                element.classList.add('show-link2')
+            }
+        })
+        
+        section_left.forEach(function(element){
+            if(isinviewport(element)){
+                element.classList.add('show-left')
+            }
+        })
+        section_right.forEach(function(element){
+            if(isinviewport(element)){
+                element.classList.add('show-right')
+            }
+        })
+        img_left.forEach(function(element){
+            if(isinviewport(element)){
+                element.classList.add('show-left')
+            }
+        })
+        img_right.forEach(function(element){
+            if(isinviewport(element)){
+                element.classList.add('show-right')
+            }
+        })
+    }
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+// Initial check when page loads
+handleScroll();
+
+    window.addEventListener('scroll',handleScroll);
+    handleScroll()
+    </script>
+    
+</script>
+</html>
